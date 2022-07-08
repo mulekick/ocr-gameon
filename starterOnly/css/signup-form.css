@@ -1,6 +1,6 @@
 /*
     1. add height on '.modal-body'
-    2. zdd styles for confirmation message
+    2. add styles for confirmation message
 */
 
 /* +++++++++++ MODAL FORM STYLES +++++++++++ */
@@ -217,4 +217,16 @@ input[data-error]::after {
     font-size: 37.5px;
     font-weight: 100;
     text-align: center;
+}
+
+/* +++++ SIGNUP FORM BREAKPOINTS ++++++ */
+
+@media screen and (max-width: 800px) {
+    .bground {
+        background-color: unset;
+    }
+
+    .content {
+        top: 50px;
+    }
 }

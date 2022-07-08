@@ -2,6 +2,7 @@
     1. remove style modal-btn (useless)
     2. add hovering style for btn-signup
     3. remove min height on .hero-section, use height
+    4. harmonize breakpoint at 800px
 */
 
 /* ++++++++ PRESENTATION DIV STYLES ++++++++ */
@@ -84,6 +85,12 @@
 /* +++++ PRESENTATION DIV BREAKPOINTS ++++++ */
 
 @media screen and (max-width: 800px) {
+
+    main {
+        padding: unset;
+        margin: 3.5%;
+    }
+
     .hero-section {
         display: block;
         box-shadow: unset;
@@ -92,7 +99,8 @@
     .hero-content {
         background: #fff;
         color: #000;
-        padding: 20px;
+        padding: unset;
+        min-width: unset;
     }
 
     .hero-content::after {
@@ -104,13 +112,16 @@
     }
 
     .hero-headline {
-        font-size: 4.5rem;
-        white-space: normal;
+        font-size: 40px;
+        font-weight: 600;
+        margin: unset;
+        white-space: unset;
     }
 
     .hero-text {
         width: unset;
-        font-size: 1.5rem;
+        margin-top: 25px;
+        font-size: small;
     }
 
     .hero-img img {

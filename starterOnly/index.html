@@ -52,14 +52,14 @@
     <main>
         <div class="hero-section">
             <div class="hero-content">
-                <h1 class="hero-headline"> Marathon national<br> de jeux vidéos </h1>
-                <p class="hero-text"> Vous aimez jouer ? Notre prochain évènement gaming est ouvert aux réservations... Places limitées ! </p>
-                <button class="btn-signup modal-btn"> je m'inscris </button>
+                <h1 class="hero-headline">Marathon national de jeux vidéos</h1>
+                <p class="hero-text">Vous aimez jouer ? Notre prochain évènement gaming est ouvert aux réservations... Places limitées !</p>
+                <button class="btn-signup modal-btn">je m'inscris</button>
             </div>
             <div class="hero-img">
                 <img src="images/background.image.jpg" alt="img" />
             </div>
-            <button class="btn-signup modal-btn"> je m'inscris </button>
+            <button class="btn-signup modal-btn">je m'inscris</button>
         </div>
         <div class="bground">
             <div class="content">
@@ -69,11 +69,11 @@
                     <form name="reserve" action="index.html" method="get" novalidate>
                         <div class="formData" data-error="Veuillez saisir 2 caractères minimum">
                             <label for="first">Prénom</label><br>
-                            <input type="text" id="first" name="first" class="text-control" minlength="2" pattern="[a-zA-Z]{2,}" required /><br>
+                            <input type="text" id="first" name="first" class="text-control" pattern="[a-zA-Z]{2,}" required /><br>
                         </div>
                         <div class="formData" data-error="Veuillez saisir 2 caractères minimum">
                             <label for="last">Nom</label><br>
-                            <input type="text" id="last" name="last" class="text-control" minlength="2" pattern="[a-zA-Z]{2,}" required /><br>
+                            <input type="text" id="last" name="last" class="text-control" pattern="[a-zA-Z]{2,}" required /><br>
                         </div>
                         <div class="formData" data-error="Veuillez saisir une addresse e-mail valide">
                             <label for="email">E-mail</label><br>
@@ -116,7 +116,7 @@
                         </div>
                         <div class="formData" data-error="Vous devez accepter les conditions d'utilisation">
                             <input type="checkbox" id="checkbox1" name="tos" class="checkbox-input" required checked />
-                            <label for="checkbox1" class="checkbox2-label" required>
+                            <label for="checkbox1" class="checkbox2-label">
                                 <span class="checkbox-icon"></span> J'ai lu et accepté les conditions d'utilisation. </label>
                             <br>
                             <input type="checkbox" id="checkbox2" name="sub" class="checkbox-input" />
@@ -127,6 +127,19 @@
                         <input type="submit" class="btn-submit" value="C'est parti" />
                     </form>
                     <!-- ========= FORM END ======= -->
+
+
+
+
+                    <div class="submit-confirm">
+                        <span>&nbsp;</span>
+                        <span>Merci pour votre inscription</span>
+                        <input type="button" id="close-confirm" class="btn-submit" value="Fermer" />
+                    </div>
+
+
+
+
                 </div>
             </div>
         </div>

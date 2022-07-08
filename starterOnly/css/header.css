@@ -1,5 +1,6 @@
 /*
     1. update font styles on '.topnav a'
+    2. refactoring of breakpoints
 */
 
 /* +++++++++ HEADER AND NAV STYLES +++++++++ */
@@ -45,8 +46,28 @@
 }
 
 /* ++++++ HEADER AND NAV BREAKPOINTS +++++++ */
+@media screen and (max-width: 800px) {
 
-@media screen and (max-width: 768px) {
+    .topnav {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        overflow: unset;
+        justify-content: space-between;
+    }
+
+    .header-logo {
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        float: unset;
+    }
+    
+    .header-logo > img {
+        height: 20px;
+    }
+
     .topnav a {
         display: none;
     }
@@ -55,9 +76,7 @@
         float: right;
         display: block;
     }
-}
 
-@media screen and (max-width: 768px) {
     .topnav.responsive {
         position: relative;
     }
@@ -73,9 +92,12 @@
         display: block;
         text-align: left;
     }
+
 }
 
+/*
 @media screen and (max-width: 540px) {
+
     .topnav a {
         display: none;
     }
@@ -85,4 +107,6 @@
         display: block;
         margin-top: -15px;
     }
+
 }
+*/
