@@ -69,11 +69,11 @@
                     <form name="reserve" action="index.html" method="get" novalidate>
                         <div class="formData" data-error="Veuillez saisir 2 caractères minimum">
                             <label for="first">Prénom</label><br>
-                            <input type="text" id="first" name="first" class="text-control" pattern="[a-zA-Z]{2,}" required /><br>
+                            <input type="text" id="first" name="first" class="text-control" pattern="^.{2,}$" required /><br>
                         </div>
                         <div class="formData" data-error="Veuillez saisir 2 caractères minimum">
                             <label for="last">Nom</label><br>
-                            <input type="text" id="last" name="last" class="text-control" pattern="[a-zA-Z]{2,}" required /><br>
+                            <input type="text" id="last" name="last" class="text-control" pattern="^.{2,}$" required /><br>
                         </div>
                         <div class="formData" data-error="Veuillez saisir une addresse e-mail valide">
                             <label for="email">E-mail</label><br>
