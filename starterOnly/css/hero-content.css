@@ -1,13 +1,12 @@
 /*
     1. remove style modal-btn (useless)
     2. add hovering style for btn-signup
-    3. remove min height on .hero-section, use height
+    3. remove min height on .hero-section
     4. harmonize breakpoint at 800px
 */
 
 /* ++++++++ PRESENTATION DIV STYLES ++++++++ */
 .hero-section {
-    height: 625px;
     border-radius: 10px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);

@@ -25,24 +25,28 @@ try {
         // manage form submission
         .addEventListener(`submit`, e => {
             const
-                // check form fields validity
+                // check form fields validity state
                 submit = fldsSelectors
                     // ensure all error messages are displayed
                     .reduce((r, x) => {
                         const
-                            // use nested destructuring on all possible properties
+                            // use nested destructuring on all possible validity state properties
                             {parentElement, validity: {valueMissing, patternMismatch, typeMismatch, rangeUnderflow, rangeOverflow}} = document.querySelector(x),
-                            // current field validity state
+                            // possible values for validity state properties: true, false or undefined (if the property is irrelevant to the
+                            // validation constraint for the current field). given that false || undefined evaluates to undefined and that
+                            // true || undefined evaluates to true, one validity state property being true (bad input) for the current field
+                            // will have the entire expression evaluate to true, thus the nested destructuring and chaining of or's.
                             cfv = valueMissing || patternMismatch || typeMismatch ||  rangeUnderflow || rangeOverflow;
-                        // display error message or reset
+                        // display error message or reset (original code uses ::after pseudoelement to create the error message from the data-error div attribute)
                         cfv ? parentElement.setAttribute(`data-error-visible`, `true`) : parentElement.removeAttribute(`data-error-visible`);
                         // update accumulator and return
                         return r && !cfv;
-                    // form is valid by default
+                    // form is valid until one field is invalid
                     }, true);
 
             if (submit === true)
-                // hide form and display the confirmation message
+                // modal-body has a fixed height and its content overflow is hidden, so hiding the
+                // signup form makes the confirmation message div go upwards and appear in its place
                 signupForm.style.display = `none`;
 
             // prevent actual submission regardless of validity, ajax should be used to submit the form if the confirmation message is to be displayed weSmart
